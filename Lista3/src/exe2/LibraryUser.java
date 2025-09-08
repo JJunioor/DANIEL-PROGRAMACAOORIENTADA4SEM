@@ -12,7 +12,7 @@ public class LibraryUser {
         this.itens = new ArrayList<LoanItem>();
     }
 
-    public LibraryUser(int id, String name, List<LoanItem> itens) {
+    public LibraryUser(int id, String name) {
         this.id = id;
         this.name = name;
         this.itens = new ArrayList<LoanItem>();
@@ -38,9 +38,11 @@ public class LibraryUser {
         this.name = name;
     }
 
-    public void addLoanItem(int id, int days, Book book){
-        this.itens.add(new LoanItem(id, days, book));
-        System.out.println("Livro emprestado com sucesso!")
+    public void addLoanItem(Book book,int id, int days) {
+        if (this.itens.size() < 5) {
+            this.itens.add(new LoanItem(book, id, days));
+            System.out.println("Livro emprestado com sucesso!");
+        } else System.out.println("Excedeu o número de empréstimos!");
     }
 
     public void removeLoanItem(int id){
@@ -83,5 +85,11 @@ public class LibraryUser {
                 ", name='" + name + '\'' +
                 ", itens=" + itens +
                 '}';
+    }
+
+    public void listBrooks(){
+        for (LoanItem item: this.itens){
+            System.out.println(item.getBook().getTittle());
+        }
     }
 }
