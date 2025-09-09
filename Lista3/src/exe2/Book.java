@@ -54,7 +54,7 @@ public class Book {
                 ", tittle='" + tittle + '\'' +
                 ", author='" + author + '\'' +
                 ", year=" + year +
-                '}';
+                "}";
     }
 }
 

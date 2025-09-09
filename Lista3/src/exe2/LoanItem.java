@@ -48,6 +48,6 @@ public class LoanItem {
                 "id=" + id +
                 ", days=" + days +
                 ", book=" + book +
-                '}';
+                "}\n";
     }
 }

@@ -38,9 +38,9 @@ public class LibraryUser {
         this.name = name;
     }
 
-    public void addLoanItem(Book book,int id, int days) {
+    public void addLoanItem(Book book,int days, int id) {
         if (this.itens.size() < 5) {
-            this.itens.add(new LoanItem(book, id, days));
+            this.itens.add(new LoanItem(book, days, id));
             System.out.println("Livro emprestado com sucesso!");
         } else System.out.println("Excedeu o número de empréstimos!");
     }
@@ -53,7 +53,7 @@ public class LibraryUser {
             if(item.getId() == id){
                 this.itens.remove(item);
                 removeu = true;
-                System.out.println("Empréstimo de livrto removido com sucesso!");
+                System.out.println("Empréstimo de livro removido com sucesso!");
                 break;
             }
         }
@@ -81,10 +81,10 @@ public class LibraryUser {
     @Override
     public String toString() {
         return "LibraryUser{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", itens=" + itens +
-                '}';
+                "\n id= " + id +
+                ",\n name= " + name + '\'' +
+                ",\n itens= " + itens +
+                "}";
     }
 
     public void listBrooks(){
