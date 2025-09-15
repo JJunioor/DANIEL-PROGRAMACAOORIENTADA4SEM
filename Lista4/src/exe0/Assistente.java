@@ -33,6 +33,6 @@ public class Assistente extends Funcionario{
 
     @Override
     public double calculaSalario(){
-        return (this.salario + this.horaExtra * 50);
+        return (super.calculaSalario() + this.horaExtra * 50);
     }
 }
