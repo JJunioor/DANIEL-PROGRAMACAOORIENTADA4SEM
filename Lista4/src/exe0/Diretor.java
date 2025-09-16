@@ -1,24 +1,22 @@
 package exe0;
 
-import java.text.DecimalFormat;
+public class Diretor extends Funcionario {
+    private float acoesEmpresa;
 
-public class Diretor extends Funcionario{
-    private double acoesEmpresa;
-
-    public Diretor(){
+    public Diretor(float acoesEmpresa) {
         super();
     }
 
-    public Diretor(String nome, String endereco, String cpf, double salario, double acoes) {
-        super(nome, endereco, cpf, salario);
+    public Diretor(String name, String endereco, String cpf, double salario, float acoesEmpresa) {
+        super(name, endereco, cpf, salario);
         this.acoesEmpresa = acoesEmpresa;
     }
 
-    public double getAcoesEmpresa() {
+    public float getAcoesEmpresa() {
         return acoesEmpresa;
     }
 
-    public void setAcoesEmpresa(double acoesEmpresa) {
+    public void setAcoesEmpresa(float acoesEmpresa) {
         this.acoesEmpresa = acoesEmpresa;
     }
 
@@ -29,8 +27,8 @@ public class Diretor extends Funcionario{
                 '}';
     }
 
-    public double calculaSalario(){
-        DecimalFormat df = new DecimalFormat("#.00");
-        return (super.calculaSalario() + Math.round(( this.acoesEmpresa * 3.14f) / 12));
+    @Override
+    public double calculaSalario() {
+        return super.calculaSalario() + (this.acoesEmpresa * 3.14f)/12;
     }
 }

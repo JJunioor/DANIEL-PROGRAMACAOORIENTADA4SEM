@@ -10,7 +10,6 @@ public class Assistente extends Funcionario{
         super();
     }
 
-
     public Assistente(String nome, String endereco, String cpf, double salario, double horaExtra) {
         super(nome, endereco, cpf, salario);
         this.horaExtra = horaExtra;
