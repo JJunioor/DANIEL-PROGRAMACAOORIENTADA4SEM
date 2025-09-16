@@ -1,37 +1,33 @@
 package exe0;
 
-public class Assistente extends Funcionario{
-    //Variavel que é da própria classe
+//extends: Assistente é filha de Funcionario
+public class Assistente extends Funcionario {
     private double horaExtra;
 
-    //Construtor já aproveitando o construtor
-    // que fez no código do funcionário ( construtor )
+    //construtor sem parametros, tem que digitar, super
     public Assistente(){
         super();
     }
 
+    // chama construtor da super classe (com parametros)
     public Assistente(String nome, String endereco, String cpf, double salario, double horaExtra) {
         super(nome, endereco, cpf, salario);
         this.horaExtra = horaExtra;
     }
 
-    public double getHoraExtra() {
-        return horaExtra;
-    }
-
-    public void setHoraExtra(double horaExtra) {
-        this.horaExtra = horaExtra;
-    }
+    //toString
+    //adicona o super.toString()+
 
     @Override
     public String toString() {
         return "Assistente{" +
-                super.toString() + "horasExtras" + horaExtra +
+                super.toString() + "horaExtra=" + horaExtra +
                 '}';
     }
 
     @Override
     public double calculaSalario(){
-        return (super.calculaSalario() + this.horaExtra * 50);
+        return(this.salario + this.horaExtra * 50);
     }
+
 }

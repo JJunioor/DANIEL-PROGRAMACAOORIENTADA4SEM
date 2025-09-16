@@ -7,9 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainRH {
-
-    public static void exibir(Funcionario funcionario) {
-        //o objeto funcionario vai executar o metodo to.String() de qual classe
+    public static void exibir(Funcionario funcionario){
+        //o objeto funcionario vai executar o método to.String() de qual classe?
         //depende da classe que for passada como parâmetro quando da chamada
         //se for passado um assistente, executa toString() do Assistente
         //se for passado um gerente, executa toString() do Gerente
@@ -25,28 +24,28 @@ public class MainRH {
         //exibir(fu1);
 
         Assistente as1 = new Assistente("Pedro", "Franca", "123.456.789-0", 2000, 3);
-        //exibir();
+        exibir(as1);
         System.out.println("-".repeat(100));
 
         //fu1 = new Gerente("Andrea", "Franca", "1234", 4000, 1000);
         //exibir(fu1);
 
         Gerente ge1 = new Gerente("Andrea", "Franca", "1234", 4000, 1000);
-        //exibir(ge1);
+        exibir(ge1);
         System.out.println("-".repeat(100));
 
         //fu1 = new Diretor("Alex", "Franca", "12654", 6000, 1200);
         //exibir(fu1);
 
         Diretor di1 = new Diretor("Alex", "Franca", "12654", 6000, 1200);
-        //exibir(di1);
+        exibir(di1);
         System.out.println("-".repeat(100));
 
         //cria um vetor de funcionários
-        //List<Funcionario> funcionarios = new ArrayList<>();
-        //funcionarios.add(as1);
-        //funcionarios.add(ge1);
-        //funcionarios.add(di1);
+        List<Funcionario> funcionarios = new ArrayList<>();
+        funcionarios.add(as1);
+        funcionarios.add(ge1);
+        funcionarios.add(di1);
 
         //calcula folha de pagto
         //percorre o vetor e soma os salários
