@@ -1,0 +1,37 @@
+package exe1;
+
+public class Carro extends Veiculo {
+    //Variavel que é da própria classe
+    private int portas;
+
+    //Construtor já aproveitando o construtor
+    // que fez no código do Veículo ( construtor )
+    public Carro() {
+        super();
+    }
+
+    public Carro(String placa, String modelo, double valorBase, int portas) {
+        super(placa, modelo, valorBase);
+        this.portas = portas;
+    }
+
+    public int getPortas() {
+        return portas;
+    }
+
+    public void setPortas(int portas) {
+        this.portas = portas;
+    }
+
+    @Override
+    public double calcularImposto() {
+        return this.valorBase * 0.03f;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" + super.toString() +
+                "portas=" + portas +
+                '}';
+    }
+}
