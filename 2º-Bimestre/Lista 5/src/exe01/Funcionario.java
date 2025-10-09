@@ -7,7 +7,7 @@ public abstract class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(String nome, Double salarioBase) {
+    public Funcionario(String nome, double salarioBase) {
         this.nome = nome;
         this.salarioBase = salarioBase;
     }
@@ -20,24 +20,19 @@ public abstract class Funcionario {
         this.nome = nome;
     }
 
-    public Double getSalarioBase() {
+    public double getSalarioBase() {
         return salarioBase;
     }
 
-    public void setSalarioBase(Double salarioBase) {
+    public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
 
-    //Não deve ter chaves, não deve descrever nada pois é abstrato e serve de base para outras classes
     public abstract double calcularSalario();
 
-    //Metodo concreto exibir info
-    @Override
-    public String toString() {
-        return "\nFuncionario{" +
-                "nome='" + nome + '\'' +
-                ", salarioBase=" + salarioBase +
-                " salário final=" + calcularSalario() +
-                '}';
+    public void exibirInfo() {
+        System.out.println("Funcionário: " + nome);
+        System.out.println("Salário: R$ " + calcularSalario());
+        System.out.println("\n");
     }
 }
