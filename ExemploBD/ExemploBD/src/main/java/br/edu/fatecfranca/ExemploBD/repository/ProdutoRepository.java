@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
+
+/*Camada que conecta com o banco e realiza todas as operações */
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     //Esta interface herdará todos os métodos de crud prontos da classe Produto
     //Long indica tipo de dado de chave primária do Produto
